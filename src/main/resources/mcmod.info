@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pseudoPotion",
+  "name": "Pseudo Potion API",
+  "description": "Allow for potion registration without the needs of ids",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["sorazodia"],
+  "credits": "The Forge and FML guys, for creating Forge",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
