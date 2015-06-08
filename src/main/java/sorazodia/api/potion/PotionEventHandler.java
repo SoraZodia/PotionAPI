@@ -47,12 +47,16 @@ public class PotionEventHandler
 		if (itemUse.item.getItem() == Items.milk_bucket)
 		{
 			int effectActive = activeEffects.getNBTList().tagCount();
-			for (int x = 0; x < effectActive; x++)
+			System.out.println(effectActive);
+			while (effectActive > 0)
 			{
-				String effectName = activeEffects.getCompoundFromList(x).getString("name");
+				String effectName = activeEffects.getCompoundFromList(0).getString("name");
 				System.out.println(effectName);
-				if (PotionEffectManager.getPotion(effectName).milkRemove() == true)
+				if (PotionEffectManager.getPotion(effectName).milkRemove() == true) 
+				{
 					PotionEffectManager.removeEffects(itemUse.entityPlayer, effectName, false);
+					effectActive--;
+				}
 			}
 		}
 

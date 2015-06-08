@@ -17,6 +17,8 @@ public class RegenrationPotion extends Potion
 	{
 		if (target.ticksExisted % 50 == 0)
 			target.setHealth(target.getHealth() + 1.0F);
+		
+		System.out.println("sup");
 	}
 
 }

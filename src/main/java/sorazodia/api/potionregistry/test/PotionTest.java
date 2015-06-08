@@ -19,6 +19,7 @@ public class PotionTest
 	public void preInit(FMLPreInitializationEvent preEvent)
 	{
 		PotionEffectManager.registerPotion(MODID, new EffectTest());
+		PotionEffectManager.registerPotion(MODID, new RegenrationPotion());
 		FMLCommonHandler.instance().bus().register(this);
 	}
 	
@@ -28,6 +29,7 @@ public class PotionTest
 		if(tick.player.isSneaking())
 		{
 			PotionEffectManager.applyEffect(tick.player, MODID, "PotionTest", 40, 1);
+			PotionEffectManager.applyEffect(tick.player, MODID, "regenerate", 40, 1);
 		}
 //		else
 //		  PotionEffectManager.removeEffects(tick.player, MODID, "PotionTest", false);
